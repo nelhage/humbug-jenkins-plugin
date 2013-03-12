@@ -92,7 +92,8 @@ public class HumbugNotifier extends Notifier {
             message += "\n\n";
             message += changeString;
         }
-        humbug.sendStreamMessage(stream, build.getProject().getName(), message);
+        String subject = build.getProject().getName() + " " + build.getDisplayName();
+        humbug.sendStreamMessage(stream, subject, message);
     }
 
     private void initialize()  {
