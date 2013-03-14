@@ -88,6 +88,7 @@ public class HumbugNotifier extends Notifier {
         } else {
             message += "**" + resultString + "**";
         }
+        message += "  in " + build.getDurationString();
         if (changeString.length() > 0 ) {
             message += "\n\n";
             message += changeString;
